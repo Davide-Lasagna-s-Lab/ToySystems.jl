@@ -1,0 +1,14 @@
+name = "ToySystems"
+uuid = "43bc7ac2-fad8-4079-92ed-761929918ac3"
+authors = ["Thomas Burton <tburton5572@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Flows = "d910d432-2c57-11e9-263c-df934de6853d"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
+SuiteSparse = "4607b0f0-06f3-5cda-b6b1-a6196a1729e9"
+
+[compat]
+LinearAlgebra = "1.11.0"
+SparseArrays = "1.11.0"

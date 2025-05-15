@@ -32,7 +32,8 @@ end
                          (zeros(8), zeros(8), F6),
                          (zeros(3), zeros(3), F7)]
         @test_nowarn F(0.0, u, dudt)
-        alloc = @allocated F(0.0, u, dudt)
+        fun(t, u, dudt) = @allocated F(t, u, dudt)
+        alloc = fun(0.0, u, dudt)
         @test alloc == 0
     end
 end
@@ -77,7 +78,8 @@ end
         @test alloc == 0
 
         @test_nowarn L(0.0, u, v, dvdt)
-        alloc = @allocated L(0.0, u, v, dvdt)
+        fun(t, u, v, dvdt) = @allocated L(t, u, v, dvdt)
+        alloc = fun(0.0, u, v, dvdt)
         @test alloc == 0
         
         # check correctness
